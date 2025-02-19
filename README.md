@@ -12,7 +12,7 @@ USE food_delivery_db;
 );
 
 -- Restaurants Table
-CREATE TABLE Restaurants (
+ Restaurants (
     restaurant_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     location TEXT NOT NULL,
@@ -22,7 +22,7 @@ CREATE TABLE Restaurants (
 );
 
 -- Menu Table
-CREATE TABLE Menu (
+ Menu (
     item_id INT AUTO_INCREMENT PRIMARY KEY,
     restaurant_id INT,
     name VARCHAR(100) NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE Menu (
 );
 
 -- Orders Table
-CREATE TABLE Orders (
+ Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     restaurant_id INT,
@@ -47,7 +47,7 @@ CREATE TABLE Orders (
 );
 
 -- Order Items Table
-CREATE TABLE Order_Items (
+ Order_Items (
     order_item_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
     item_id INT,
@@ -58,7 +58,7 @@ CREATE TABLE Order_Items (
 );
 
 -- Payments Table
-CREATE TABLE Payments (
+ Payments (
     payment_id INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT,
     user_id INT,
